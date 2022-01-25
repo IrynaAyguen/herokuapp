@@ -10,7 +10,7 @@ import java.util.List;
 /**
  * Hovers Page
  */
-public class HoversPage extends Page {
+public class HoversPage extends PageBase {
 
     public HoversPage(WebDriver driver) {
         super(driver);
