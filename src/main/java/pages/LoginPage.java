@@ -17,7 +17,11 @@ public class LoginPage extends PageBase {
     @FindBy(id = "password")
     WebElement password;
 
+    @FindBy(css = ".radius")
+    WebElement loginBtn;
 
+    @FindBy(id = "flash")
+    WebElement message;
 
     public void goToLoginPage(){
         driver.navigate().to(LOGIN_URL);
@@ -29,19 +33,14 @@ public class LoginPage extends PageBase {
         return this;
     }
 
-    @FindBy(css = ".radius")
-    WebElement loginBtn;
 
     public SecurePage clickOnLoginButton() {
         loginBtn.click();
         return new SecurePage(driver);
     }
 
-    @FindBy(id = "flash")
-    WebElement message;
 
     public String getMessageText() {
-        System.out.println(message.getText());
         return message.getText();
     }
 }

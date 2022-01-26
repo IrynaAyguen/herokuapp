@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class LoginTests extends TestBase{
+public class LoginTests extends TestBase {
 
     @Test
     public void loginPositiveTest() {
@@ -14,7 +14,7 @@ public class LoginTests extends TestBase{
         //insert username, password
         loginPage.insertCredentials("tomsmith", "SuperSecretPassword!");
         // click on Login button
-        loginPage.clickOnLoginButton();
+        securePage = loginPage.clickOnLoginButton();
         // assertion
         Assertions.assertTrue(securePage.isLogoutButtonPresent());
     }

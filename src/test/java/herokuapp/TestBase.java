@@ -22,7 +22,7 @@ public class TestBase {
         driver = new ChromeDriver();
         hoversPage = new HoversPage(driver);
         loginPage = new LoginPage(driver);
-        securePage = new SecurePage(driver);
+        //securePage = new SecurePage(driver);
     }
 
     @AfterEach
